@@ -3,7 +3,7 @@
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/AaGK-fj-BAM
 
-var paused = false
+var paused = false;
 var s;
 var scl = 20;
 
@@ -29,6 +29,10 @@ function mousePressed() {
 }
 
 function draw() {
+  if(paused){
+
+  } else {
+
   background(51);
 
   if (s.eat(food)) {
@@ -42,7 +46,7 @@ function draw() {
   fill(255, 0, 100);
   rect(food.x, food.y, scl, scl);
 }
-
+}
 
 
 
@@ -60,13 +64,7 @@ function keyPressed() {
 }
 
 function keyPressed(){
-  if(key === 'p'){
-    function draw(){
-      if(paused){ 
+  if(key === 'p'){ 
       paused = true; 
-      } else{
-    
-      }
-    }
+   }
   }
-}
