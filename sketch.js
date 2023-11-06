@@ -3,6 +3,7 @@
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/AaGK-fj-BAM
 
+var paused = false
 var s;
 var scl = 20;
 
@@ -55,5 +56,17 @@ function keyPressed() {
     s.dir(1, 0);
   } else if (keyCode === LEFT_ARROW) {
     s.dir(-1, 0);
+  }
+}
+
+function keyPressed(){
+  if(key === 'p'){
+    function draw(){
+      if(paused){ 
+      paused = true; 
+      } else{
+    
+      }
+    }
   }
 }
