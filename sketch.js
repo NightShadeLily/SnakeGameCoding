@@ -33,12 +33,12 @@ function draw() {
     push();
     textStyle(ITALIC);
     textSize(100);
-    fill(25,200,255)
+    fill(0,0,255)
     textAlign(CENTER, CENTER);
     const middleX = width/2;
     const middleY = height/2;
     text('PAUSED', middleX, middleY);
-    fill(0,0,255)
+    fill(25,200,255)
     text('PAUSED', middleX + 6, middleY + 6);
     fill(255);
     text('PAUSED', middleX + 3, middleY + 3);
