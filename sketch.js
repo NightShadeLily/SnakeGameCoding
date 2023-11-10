@@ -31,6 +31,7 @@ function mousePressed() {
 function draw() {
     if (paused){
     push();
+    textSytle(italic);
     textSize(100);
     fill(25,200,255)
     textAlign(CENTER, CENTER);
