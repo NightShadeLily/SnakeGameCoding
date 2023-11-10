@@ -38,9 +38,9 @@ function draw() {
     const middleY = height/2;
     text('PAUSED', middleX, middleY);
     fill(0,0,255)
-    text('PAUSED', middleX + 3, middleY + 3);
-    fill(255);
     text('PAUSED', middleX + 6, middleY + 6);
+    fill(255);
+    text('PAUSED', middleX + 3, middleY + 3);
     Pop();
   } else {
   background(51);
