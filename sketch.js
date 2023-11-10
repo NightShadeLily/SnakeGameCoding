@@ -31,7 +31,7 @@ function mousePressed() {
 function draw() {
     if (paused){
     push();
-    textStyle(italic);
+    textStyle(ITALIC);
     textSize(100);
     fill(25,200,255)
     textAlign(CENTER, CENTER);
