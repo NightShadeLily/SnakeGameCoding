@@ -62,7 +62,7 @@ function draw() {
 
 function keyPressed() {
   if (key === 'p') {
-   paused = true;
+   //paused = true;
    paused = !paused;
 //if (paused) {
   //paused = false;
