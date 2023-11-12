@@ -62,7 +62,9 @@ function draw() {
 
 function keyPressed() {
   if (key === 'p') {
-   paused = !paused;
+   do {
+    paused = !paused
+   } while (condition);;
   } else {
     if (keyCode === UP_ARROW) {
       s.dir(0, -1);
