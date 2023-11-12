@@ -62,12 +62,12 @@ function draw() {
 
 function keyPressed() {
   if (key === 'p') {
-   //paused = true;
-   //paused = !paused;
+   paused = true;
 if (paused) {
- paused = false;
- } else {
- paused = true;
+  paused = !paused;
+// paused = false;
+ //} else {
+ //paused = true;
   } else {
     if (keyCode === UP_ARROW) {
       s.dir(0, -1);
@@ -78,5 +78,6 @@ if (paused) {
     } else if (keyCode === LEFT_ARROW) {
       s.dir(-1, 0);
     }
+  }
   }
 }
