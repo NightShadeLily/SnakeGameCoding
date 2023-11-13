@@ -53,8 +53,8 @@ function draw() {
   s.update();
   s.show();
 
-
-  fill(0, 255, 255);
+  fill(mouseX, 135, mouseY)
+  //fill(0, 255, 255);
   rect(food.x, food.y, scl, scl);
   }
 }
