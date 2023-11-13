@@ -42,7 +42,7 @@ function draw() {
     text('PAUSED', middleX + 6, middleY + 6);
     fill(255);
     text('PAUSED', middleX + 3, middleY + 3);
-    Pop();
+    pop();
   } else {
   background(51);
 
