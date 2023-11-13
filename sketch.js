@@ -54,7 +54,7 @@ function draw() {
   s.show();
 
 
-  fill(255, 0, 100);
+  fill(155, 200, 100);
   rect(food.x, food.y, scl, scl);
   }
 }
