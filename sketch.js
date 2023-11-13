@@ -30,7 +30,7 @@ function mousePressed() {
 
 function draw() {
     if (paused){
-    push()
+    push();
     textStyle(ITALIC);
     textSize(100);
     fill(0,0,255)
@@ -42,7 +42,7 @@ function draw() {
     text('PAUSED', middleX + 6, middleY + 6);
     fill(255);
     text('PAUSED', middleX + 3, middleY + 3);
-    Pop()
+    Pop();
   } else {
   background(51);
 
