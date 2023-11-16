@@ -53,7 +53,7 @@ function draw() {
   s.update();
   s.show();
 
-  fill(B3FFF2)
+  fill(random)
   //fill(0, 255, 255);
   rect(food.x, food.y, scl, scl);
   }
