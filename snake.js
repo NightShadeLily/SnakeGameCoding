@@ -11,6 +11,7 @@ function Snake() {
   this.total = 0;
   this.tail = [];
   this.color = [random(255), random(255), random(255)];
+  this.colorDelta = 25;
 
   this.eat = function(pos) {
     var d = dist(this.x, this.y, pos.x, pos.y);
@@ -53,9 +54,12 @@ function Snake() {
     this.x = constrain(this.x, 0, width - scl);
     this.y = constrain(this.y, 0, height - scl);
 
-    let xColor = map(this.x, 0, width, 0, 255);
-    let yColor = map(this.x, 0, height, 0, 255);
-    this.color = [xColor, yColor, 255];
+   // let xColor = map(this.x, 0, width, 0, 255);
+   // let yColor = map(this.x, 0, height, 0, 255);
+   // this.color = [xColor, yColor, 255];
+   for(let i = 0; i < this.color.length; ++i) {
+    this.color[i] = random(this.color[i] - this.colorDelta, this.color[i] + this.colorDelta)
+   }
   }
 
   this.show = function() {
