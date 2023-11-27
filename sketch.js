@@ -11,11 +11,10 @@ var food;
 
 function setup() {
   createCanvas(600, 600);
-  s = new Snake();
-  frameRate(15);
-  pickLocation();
-
+  paused = false;
+  everythingButCreateCanvas();
 }
+function everythingButCreateCanvas();
 
 function pickLocation() {
   var cols = floor(width / scl);
