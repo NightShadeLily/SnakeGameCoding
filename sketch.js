@@ -15,7 +15,10 @@ function setup() {
   everythingButCreateCanvas();
 }
 function everythingButCreateCanvas();
-
+s = new Snake();
+  frameRate(15);
+  pickLocation();
+  
 function pickLocation() {
   var cols = floor(width / scl);
   var rows = floor(height / scl);
