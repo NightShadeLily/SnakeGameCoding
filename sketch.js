@@ -18,7 +18,7 @@ function everythingButCreateCanvas();
 s = new Snake();
   frameRate(15);
   pickLocation();
-  
+
 function pickLocation() {
   var cols = floor(width / scl);
   var rows = floor(height / scl);
@@ -65,6 +65,15 @@ function mouseMoved() {
   console.log(`${mouseX}, ${mouseY}`);
   return false;
   }
+  function isMouseOverReset() {
+    let isMouseOver = false;
+    If (paused && mouseX > reset && mouseX < (resetX + resetWidth) &&
+    mouseY > resetY && mouseY < (resetY + resetHeight)) {
+    isMouseOver = true; 
+    }
+    return isMouseOver;
+    }
+    
   
 function keyPressed() {
   if (key === 'p') {
