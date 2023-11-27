@@ -74,7 +74,7 @@ function mouseMoved() {
   }
   function isMouseOverReset() {
     let isMouseOver = false;
-    If (paused && mouseX > reset && mouseX < (resetX + resetWidth) &&
+    if (paused && mouseX > reset && mouseX < (resetX + resetWidth) &&
     mouseY > resetY && mouseY < (resetY + resetHeight)) {
     isMouseOver = true; 
     }
