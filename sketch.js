@@ -59,7 +59,11 @@ function draw() {
   }
 }
 
-
+function mouseMoved() {
+  console.log(`${mouseX}, ${mouseY}`);
+  return false;
+  }
+  
 function keyPressed() {
   if (key === 'p') {
     paused = !paused
