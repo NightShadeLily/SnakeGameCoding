@@ -67,19 +67,19 @@ text(`RESET`, 200,125);
   rect(food.x, food.y, scl, scl);
   }
 }
-
-function mouseMoved() {
-  console.log(`${mouseX}, ${mouseY}`);
-  return false;
+  function mouseMoved() {
+    console.log(`${mouseX}, ${mouseY}`);  
+    // prevent default
+    return false;
   }
   function isMouseOverReset() {
     let isMouseOver = false;
-    if (paused && mouseX > reset && mouseX < (resetX + resetWidth) &&
-    mouseY > resetY && mouseY < (resetY + resetHeight)) {
-    isMouseOver = true; 
+    if (paused && mouseX > resetX && mouseX < (resetX + resetWidth) &&
+       mouseY > resetY && mouseY < (resetY + resetHeight)) {
+      isMouseOver = true;
     }
     return isMouseOver;
-    }
+  }
     function mouseClicked() {
       if (isMouseOverReset()) {
         console.log('You clicked it!');
@@ -88,7 +88,7 @@ function mouseMoved() {
         console.log(`Clicked: ${mouseX}, ${mouseY}`);
       }
       return false;
-    }  
+    }
   
 function keyPressed() {
   if (key === 'p') {
