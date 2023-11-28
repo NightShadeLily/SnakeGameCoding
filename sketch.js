@@ -50,7 +50,7 @@ fill(255);
 rect(220,300,220,75);
 fill(0);
 textSize(50);
-text(`RESET`, 275,125);
+text(`RESET`, 275,300);
     pop();
   } else {
   background(51);
