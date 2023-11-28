@@ -80,7 +80,15 @@ function mouseMoved() {
     }
     return isMouseOver;
     }
-    
+    function mouseClicked() {
+      if (isMouseOverReset()) {
+        console.log('You clicked it!');
+        everythingButCreateCanvas();
+      } else {
+        console.log(`Clicked: ${mouseX}, ${mouseY}`);
+      }
+      return false;
+    }  
   
 function keyPressed() {
   if (key === 'p') {
