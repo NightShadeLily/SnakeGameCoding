@@ -46,7 +46,7 @@ function draw() {
     fill(255);
     text('PAUSED', middleX + 3, middleY + 3);
 
-fill(255);
+fill(0,0,255);
 rect(185,350,200,75);
 fill(25,200,255);
 textSize(50);
