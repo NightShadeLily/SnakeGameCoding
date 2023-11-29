@@ -51,6 +51,9 @@ rect(185,350,200,75);
 fill(25,200,255);
 textSize(50);
 text(`RESET`, 280,385);
+fill(255);
+textSize(50);
+text(`RESET`, 285,387);
     pop();
   } else {
   background(51);
