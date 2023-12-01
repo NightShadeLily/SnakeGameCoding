@@ -95,7 +95,7 @@ function mouseClicked() {
   }
   
   return false;
-}
+
   
 function keyPressed() {
   if (key === 'p') {
