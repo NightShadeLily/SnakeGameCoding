@@ -88,11 +88,12 @@ function mouseClicked() {
   } else {
     console.log(`Clicked: ${mouseX}, ${mouseY}`);
   }
-
-  let row = mouseY / scl;
-  let col = mouseX / scl;
-  food = createVector(floor(col), floor(row));
-  food.mult(scl);
+  function mousePressed() {
+    let row = mouseY / scl;
+    let col = mouseX / scl;
+    food = createVector(floor(col), floor(row));
+    food.mult(scl);
+  }
   
   return false;
 }
