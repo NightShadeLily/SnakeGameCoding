@@ -88,7 +88,6 @@ function mouseClicked() {
   } else {
     console.log(`Clicked: ${mouseX}, ${mouseY}`);
   }
-  function mousePressed() {
     let row = mouseY / scl;
     let col = mouseX / scl;
     food = createVector(floor(col), floor(row));
