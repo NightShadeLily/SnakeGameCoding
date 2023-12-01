@@ -92,10 +92,9 @@ function mouseClicked() {
     let col = mouseX / scl;
     food = createVector(floor(col), floor(row));
     food.mult(scl);
-  }
   
   return false;
-
+}
   
 function keyPressed() {
   if (key === 'p') {
