@@ -26,13 +26,8 @@ function pickLocation() {
   food.mult(scl);
 }
 
-function mousePressed() {
-  s.total++;
-}
-
 function draw() {
-
-    if (paused){
+  if (paused){
     push();
     textStyle(ITALIC);
     textSize(100);
@@ -46,52 +41,61 @@ function draw() {
     fill(255);
     text('PAUSED', middleX + 3, middleY + 3);
 
-fill(0,0,255);
-rect(185,350,200,75);
-fill(25,200,255);
-textSize(50);
-text(`RESET`, 280,385);
-fill(255);
-textSize(50);
-text(`RESET`, 285,387);
+    fill(0,0,255);
+    rect(185,350,200,75);
+    fill(25,200,255);
+    textSize(50);
+    text(`RESET`, 280,385);
+    fill(255);
+    textSize(50);
+    text(`RESET`, 285,387);
     pop();
   } else {
-  background(51);
-
-  if (s.eat(food)) {
-    pickLocation();
-  }
-  s.death();
-  s.update();
-  s.show();
-
-  fill(0,0,255)
-  //fill(0, 255, 255);
-  rect(food.x, food.y, scl, scl);
-  }
+    background(51);
+    
+    if (s.eat(food)) {
+      pickLocation();
+    }
+    s.death();
+    s.update();
+    s.show();
+  
+    fill(0, 0, 255);
+    //fill(0, 255, 255);
+    rect(food.x, food.y, scl, scl);
+    }
 }
-  function mouseMoved() {
-    console.log(`${mouseX}, ${mouseY}`);  
-    // prevent default
-    return false;
+
+function mouseMoved() {
+  console.log(`${mouseX}, ${mouseY}`);  
+  // prevent default
+  return false;
+}
+
+function isMouseOverReset() {
+  let isMouseOver = false;
+  if (paused && mouseX > resetX && mouseX < (resetX + resetWidth) &&
+     mouseY > resetY && mouseY < (resetY + resetHeight)) {
+    isMouseOver = true;
   }
-  function isMouseOverReset() {
-    let isMouseOver = false;
-    if (paused && mouseX > resetX && mouseX < (resetX + resetWidth) &&
-       mouseY > resetY && mouseY < (resetY + resetHeight)) {
-      isMouseOver = true;
-    }
-    return isMouseOver;
+  return isMouseOver;
+}
+
+function mouseClicked() {
+  if (isMouseOverReset()) {
+    console.log('You clicked it!');
+    everythingButCreateCanvas();
+  } else {
+    console.log(`Clicked: ${mouseX}, ${mouseY}`);
   }
-    function mouseClicked() {
-      if (isMouseOverReset()) {
-        console.log('You clicked it!');
-        everythingButCreateCanvas();
-      } else {
-        console.log(`Clicked: ${mouseX}, ${mouseY}`);
-      }
-      return false;
-    }
+
+  let row = mouseY / scl;
+  let col = mouseX / scl;
+  food = createVector(floor(col), floor(row));
+  food.mult(scl);
+  
+  return false;
+}
   
 function keyPressed() {
   if (key === 'p') {
@@ -107,4 +111,4 @@ function keyPressed() {
       s.dir(-1, 0);
     }
   }
-  }
+}
